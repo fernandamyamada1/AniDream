@@ -5,6 +5,7 @@
  ## News
 
 **AniDream has been accepted for presentation at [IEEE ISMAR 2025](https://ieeeismar.org/)!** 
+
 Stay tuned for the final paper and presentation details.
 
 ## Overview
