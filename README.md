@@ -13,9 +13,9 @@ Stay tuned for the final paper and presentation details.
 
 ## Getting Started
 
-### Requirements
+### Core Requirements
 
-- Python 3.9+  
+- Python 3.11.10
 - PyTorch 2.1.0  
 - CUDA 11.8  
 
