@@ -1,12 +1,16 @@
-## AniDream: Generating Skeleton-Guided Anime Avatars from Text Prompts
+# AniDream
 
 ![AniDream Output](assets/cover.png)
 
- ## News
+🚀 Exciting News! 🚀
 
 **AniDream has been accepted for presentation at [IEEE ISMAR 2025](https://ieeeismar.org/)!** 
 
-Stay tuned for the final paper and presentation details.
+💡 Title: AniDream: Generating Skeleton-Guided Anime Avatars from Text Prompts
+
+👩‍💻 Authors: Fernanda Miyuki Yamada, Hiroki Takahashi
+
+🎓 Conference: IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2025)
 
 ## Abstract
 
@@ -115,9 +119,9 @@ This animation shows an avatar performing kung-fu movements. The movements come 
 
 ## Acknowledgments
 
-This work was supported by the Industrial Technology Innovation Program (Project No. 20023347: *Development of Graph-based Intelligent Metaverse Engine for Immersive Content-sharing Service*) funded by the Ministry of Trade, Industry & Energy of the Republic of Korea.
+🔧 This work was supported by the Industrial Technology Innovation Program (Project No. 20023347: *Development of Graph-based Intelligent Metaverse Engine for Immersive Content-sharing Service*) funded by the Ministry of Trade, Industry & Energy of the Republic of Korea.
 
-We gratefully acknowledge the authors of [DreamWaltz-G](https://github.com/Yukun-Huang/DreamWaltz-G). Their framework provided the foundation and inspiration for AniDream, particularly in its skeleton-guided diffusion pipeline and avatar animation capabilities.
+✨ We gratefully acknowledge the authors of [DreamWaltz-G](https://github.com/Yukun-Huang/DreamWaltz-G). Their framework provided the foundation and inspiration for AniDream, particularly in its skeleton-guided diffusion pipeline and avatar animation capabilities.
 
 ## Citation
 ```
