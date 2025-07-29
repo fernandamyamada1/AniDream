@@ -100,10 +100,18 @@ This animation demonstrates how the generated character evolves during training 
 The following shows a single sample normal map generated for the prompt *"an anime boy"*.  Normal maps capture detailed surface geometry and shading cues, which are important for realistic lighting and 3D rendering.
 
 
-<div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="assets/boy.gif" width="450" />
-  <img src="assets/normal.gif" width="450" />
-</div>
+<table align="center">
+  <tr>
+    <td align="center" style="padding: 10px;">
+      <img src="assets/boy.gif" width="450"/><br/>
+      <sub><i>Avatar</i></sub>
+    </td>
+    <td align="center" style="padding: 10px;">
+      <img src="assets/normal.gif" width="450"/><br/>
+      <sub><i>Normal Map</i></sub>
+    </td>
+  </tr>
+</table>
 
 ### Animation
 
