@@ -101,8 +101,8 @@ The following shows a single sample normal map generated for the prompt *"an ani
 
 
 <p align="center">
- <img src="assets/boy.gif" width="500"/>
- <img src="assets/normal.gif" width="500"/>
+ <img src="assets/boy.gif" width="450"/>
+ <img src="assets/normal.gif" width="450"/>
 </p>
 
 ### Animation
