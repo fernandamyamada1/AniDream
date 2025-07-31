@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>3D Printing Preview</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/loaders/STLLoader.js"></script>
+<script>
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({antialias: true});
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  // Lighting
+  const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
+  hemiLight.position.set(0, 20, 0);
+  scene.add(hemiLight);
+
+  const dirLight = new THREE.DirectionalLight(0xffffff);
+  dirLight.position.set(3, 10, 10);
+  scene.add(dirLight);
+
+  // Load STL from assets/boy.stl
+  const loader = new THREE.STLLoader();
+  loader.load('assets/boy.stl', function (geometry) {
+    geometry.computeVertexNormals();
+
+    const material = new THREE.MeshStandardMaterial({ color: 0x0077be, metalness: 0.5, roughness: 0.5 });
+    const mesh = new THREE.Mesh(geometry, material);
+
+    // Center geometry
+    geometry.computeBoundingBox();
+    const center = geometry.boundingBox.getCenter(new THREE.Vector3());
+    mesh.geometry.translate(-center.x, -center.y, -center.z);
+
+    scene.add(mesh);
+
+    camera.position.z = geometry.boundingBox.getSize(new THREE.Vector3()).length() * 1.5;
+
+    animate();
+
+    function animate() {
+      requestAnimationFrame(animate);
+      mesh.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    }
+  });
+
+  // Responsive resizing
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth/window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+</script>
+</body>
+</html>
