@@ -125,6 +125,12 @@ This animation shows an avatar performing kung-fu movements. The movements come 
   The original video sample for this animation comes from: <a href="https://github.com/IDEA-Research/Motion-X" target="_blank">github.com/IDEA-Research/Motion-X</a>
 </p>
 
+### 3D Printing
+
+We provide a few simplified avatar models in STL format, ready for 3D printing. These files are optimized for standard consumer 3D printers and preserve key avatar features. Feel free to download and print them.
+
+
+
 ## Acknowledgments
 
 🔧 This work was supported by the Industrial Technology Innovation Program (Project No. 20023347: *Development of Graph-based Intelligent Metaverse Engine for Immersive Content-sharing Service*) funded by the Ministry of Trade, Industry & Energy of the Republic of Korea.
