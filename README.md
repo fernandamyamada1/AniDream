@@ -26,7 +26,7 @@ AniDream takes a **text prompt** and processes it using a diffusion model guided
 ## Video
 [Download Supplementary Video](assets/demo_video.mp4)
 
-
+<!-- 
 ## Getting Started
 
 ### Core Requirements
@@ -47,6 +47,7 @@ pip install -r requirements.txt
 ```
 bash scripts/anime_ismar.sh "an anime boy"
 ```
+-->
 
 ## Results
 
