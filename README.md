@@ -1,5 +1,11 @@
 # AniDream
 
+🌟 Welcome to the AniDream Repository! 🌟 
+
+We are excited to share the official repository for **"AniDream: Generating Skeleton-Guided Anime Avatars from Text Prompts"**
+
+
+
 ![AniDream Output](assets/cover.png)
 
 🚀 Exciting News! 🚀
