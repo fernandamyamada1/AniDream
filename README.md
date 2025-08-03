@@ -31,7 +31,10 @@ AniDream takes a **text prompt** and processes it using a diffusion model guided
 ![AniDream Workflow](assets/workflow.png)
 
 ## Video
-[Download Supplementary Video](assets/demo_video.mp4)
+The following video is a compressed preview.  
+For the full-resolution supplementary video, please [download it here](assets/demo_video.mp4).
+
+[Watch Compressed Preview](https://github.com/user-attachments/assets/3a6b217c-2180-4f48-afaf-3164f0c2f1bc)
 
 <!-- 
 ## Getting Started
