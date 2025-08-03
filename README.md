@@ -155,6 +155,49 @@ We provide a few simplified avatar models in STL format, ready for 3D printing. 
   </tr>
 </table>
 
+<!-- 
+
+## Applications
+
+While AniDream was initially developed for immersive AR/VR and gaming experiences, its potential extends far beyond these domains. We demonstrate the versatility of AniDream avatars across several core commercial segments of manga and anime production:
+
+<table align="center">
+  <tr>
+    <td align="center" style="padding: 10px;">
+      <img src="assets/applications_combined.png" width="600"/><br/>
+      <sub><i>Applications of AniDream avatars: (left) Manga panel, (center) Animation, (right) 3D Merchandise</i></sub>
+    </td>
+  </tr>
+</table>
+
+<p align="center" style="font-size: small; margin-top: 10px;">
+  The original motion sample for this animation comes from: <a href="https://github.com/google/aistplusplus_api" target="_blank">github.com/google/aistplusplus_api</a>
+</p>
+
+- **Manga Panel Generation**  
+  A low-resolution render of a generated avatar is processed into black-and-white and passed to GPT-4o with a prompt such as *"Generate a background for this anime art. Like a manga panel."* This results in stylized manga layouts with character integration.
+
+- **Animation**  
+  Using motion data, the avatars can be animated and composited into anime-style backgrounds. We can control body gestures frame-by-frame, apply real-world motions like dancing or walking, and ensure consistency between static design and animated behavior.
+
+- **Merchandise Production**  
+  AniDream avatars can be exported to STL format and 3D printed. This enables direct translation of digital characters into tangible merchandise products, such as action figures.
+
+These demonstrations highlight the capacity of AniDream to support **cross-medium consistency**, ensuring that the same avatar design can be maintained across visual storytelling, animation, and physical products.
+
+### Supported Content Production Segments
+
+AniDream provides tools and outputs that align with the following industry segments:
+
+- Manga creation  
+- Anime-style animation  
+- Merchandise production  
+- Augmented/Virtual Reality  
+- Gaming and interactive media  
+- Metaverse and social platforms
+---
+-->
+
 ## Acknowledgments
 
 🔧 This work was supported by the Industrial Technology Innovation Program (Project No. 20023347: *Development of Graph-based Intelligent Metaverse Engine for Immersive Content-sharing Service*) funded by the Ministry of Trade, Industry & Energy of the Republic of Korea.
