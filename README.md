@@ -64,11 +64,30 @@ git clone https://github.com/fernandamyamada1/AniDream.git
 cd AniDream
 pip install -r requirements.txt
 ```
+We suggest that users follow the installation instructions in [DreamWaltz-G Github](https://github.com/Yukun-Huang/DreamWaltz-G).
 
 ### Usage
+Run the following script to generate a single avatar:
 ```
-bash scripts/anime_ismar.sh "an anime boy"
+bash scripts/anime_train.sh "an anime boy"
 ```
+
+Run the following script to reproduce the experiments presented in our paper:
+```
+bash scripts/test.sh
+```
+
+### Training Stages
+
+#### Canonical NeRF Training – Progressive Low Resolution
+
+The objective is to build a stable canonical NeRF representation of the avatar while gradually increasing image resolution. It follows 64x64 -> 128x128 -> 256x256. This stepwise growth allows the model to refine surface details and textures.
+
+
+#### Canonical NeRF Training – High Resolution
+
+Refine the avatar at the final high resolution 512x512. Training resumes from the checkpoint of the progressive stage. This stage is computationally heavy and is optional. 
+
 -->
 
 ## Results
@@ -137,6 +156,8 @@ The following shows a single sample normal map generated for the prompt *"an ani
 </table>
 
 ### Animation
+
+Although animation is not the focus of AniDream, the generated avatars can be animated by running the scripts provided in [DreamWaltz-G Github](https://github.com/Yukun-Huang/DreamWaltz-G). 
 
 This animation shows an avatar performing kung-fu movements. The movements come from an actor in the original video, from which keypoints are extracted. These keypoints are then used to render the avatar, demonstrating how the model animates characters based on real human motion.
 
@@ -210,7 +231,7 @@ These demonstrations highlight the capacity of AniDream to support **cross-mediu
 
 AniDream provides tools and outputs that align with the following industry segments:
 
-- Manga Creation  
+- Manga Creation  [DreamWaltz-G](https://github.com/Yukun-Huang/DreamWaltz-G)
 - Anime-style Animation  
 - Merchandise Production  
 - Augmented and Virtual Reality  
