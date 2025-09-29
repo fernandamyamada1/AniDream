@@ -66,7 +66,87 @@ pip install -r requirements.txt
 ```
 We suggest that users follow the installation instructions in [DreamWaltz-G Github](https://github.com/Yukun-Huang/DreamWaltz-G).
 
-### Usage
+### Human Template Models
+
+Before starting training, please download the human template models from the official project pages:
+
+- [SMPL-X](https://smpl-x.is.tue.mpg.de/)  
+- [FLAME](https://flame.is.tue.mpg.de/)  
+
+After downloading, place the files in the following structure:
+
+```
+external
+└── human_templates
+    ├── smplx
+    │   ├── SMPLX_NEUTRAL_2020.npz
+    │   ├── FLAME_vertex_ids.npy
+    │   ├── MANO_vertex_ids.pkl
+    │   └── smplx_vert_segmentation.json
+    ├── flame
+    │   └── FLAME_masks.pkl
+    └── vposer
+        └── v2.0
+            ├── snapshots
+            │   ├── V02_05_epoch=08_val_loss=0.03.ckpt
+            │   └── V02_05_epoch=13_val_loss=0.03.ckpt
+            ├── V02_05.yaml
+            └── V02_05.log
+```
+
+### Pre-Trained Instant-NGP
+
+Our method builds upon a DreamWaltz-G that adopts a two-stage training pipeline of **NeRF → 3DGS**, where NeRF is initialized with SMPL-X before training.  
+
+DreamWaltz-G provides pre-trained NeRFs available on [HuggingFace](https://huggingface.co/KevinHuang/DreamWaltz-G/tree/main/external/human_templates/instant-ngp).
+
+If you would like to use them, please download and organize the files following the structure below:
+
+```
+external
+└── human_templates
+    ├── instant-ngp
+    │   ├── adult_neutral
+    │   │   ├── step_005000.pth
+    │   │   └── 005000_image.mp4
+    ...
+```
+
+### Dataset for Inferences
+
+We provide data loaders to read **SMPL-X motion sequences** from four publicly available human motion datasets:
+
+- [Motion-X](https://motion-x-dataset.github.io/)  
+- [TalkSHOW](https://talkshow.is.tue.mpg.de/)  
+- [AIST++](https://google.github.io/aistplusplus_dataset/)  
+- [3DPW](https://virtualhumans.mpi-inf.mpg.de/3DPW/)  
+- [Motion-X-ReEnact](https://huggingface.co/KevinHuang/DreamWaltz-G/tree/main/datasets/Motion-X-ReEnact)
+
+These motion data can be used to animate 3D avatars in different demos.  
+
+To use them, please download the datasets from their official websites and organize them as follows (no need to unzip): 
+
+```
+datasets
+├── 3DPW
+│   ├── readme_and_demo.zip
+│   ├── sequenceFiles.zip
+│   └── SMPL-X.zip
+├── AIST++
+│   ├── 20210308_cameras.zip
+│   └── 20210308_motions.zip
+├── Motion-X
+│   └── motionx_smplx.zip
+├── Motion-X-ReEnact
+│   └── Motion-X-ReEnact.zip
+└── TalkShow
+    ├── chemistry_pkl_tar.tar.gz
+    ├── conan_pkl_tar.tar.gz
+    └── ...
+```
+
+
+## Usage
 Run the following script to generate a single avatar:
 ```
 bash scripts/anime_train.sh "an anime boy"
@@ -77,16 +157,50 @@ Run the following script to reproduce the experiments presented in our paper:
 bash scripts/test.sh
 ```
 
-### Training Stages
+## Training Stages
 
 #### Canonical NeRF Training – Progressive Low Resolution
 
 The objective is to build a stable canonical NeRF representation of the avatar while gradually increasing image resolution. It follows 64x64 -> 128x128 -> 256x256. This stepwise growth allows the model to refine surface details and textures.
 
+<p align="center">
+ <img src="assets/train_low.gif" width="700"/>
+</p>
+
 
 #### Canonical NeRF Training – High Resolution
 
 Refine the avatar at the final high resolution 512x512. Training resumes from the checkpoint of the progressive stage. This stage is computationally heavy and is optional. 
+
+<p align="center">
+ <img src="assets/train_high.gif" width="700"/>
+</p>
+
+#### Animatable 3DGS
+
+The animation stages follow the method proposed in DreamWaltz-G.  
+
+Since animation is not the primary focus of our work, this step is provided for completeness but remains optional. 
+
+In the script for training, we provide code for 3D animation using motions from [AIST++](https://google.github.io/aistplusplus_dataset/).
+
+
+<table align="center">
+  <tr>
+    <td align="center" style="padding: 10px;">
+      <img src="assets/train_rig.gif" width="300"/><br/>
+      <sub><i>Avatar</i></sub>
+    </td>
+    <td align="center" style="padding: 10px;">
+      <img src="assets/train_random.gif" width="300"/><br/>
+      <sub><i>Normal Map</i></sub>
+    </td>
+    <td align="center" style="padding: 10px;">
+      <img src="assets/train_aist.gif" width="300"/><br/>
+      <sub><i>Normal Map</i></sub>
+    </td>
+  </tr>
+</table>
 
 -->
 
@@ -255,4 +369,3 @@ AniDream provides tools and outputs that align with the following industry segme
   year      = {2025}
 }
 ```
-
