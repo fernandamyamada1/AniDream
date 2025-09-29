@@ -328,15 +328,15 @@ While AniDream was initially developed for immersive AR/VR and gaming experience
 <table align="center">
   <tr>
     <td align="center" style="padding: 10px;">
-      <img src="assets/demo_manga.png" width="300"/><br/>
+      <img src="assets/demo_manga.png" height="400"/><br/>
       <sub><i>Manga Panel Generation</i></sub><br/>
     </td>
     <td align="center" style="padding: 10px;">
-      <img src="assets/demo_background.gif" width="370"/><br/>
+      <img src="assets/demo_background.gif" height="400"/><br/>
       <sub><i>Background Animation with AIST++</i></sub><br/>
     </td>
     <td align="center" style="padding: 10px;">
-      <img src="assets/demo_merchandise.jpg" width="300"/><br/>
+      <img src="assets/demo_merchandise.jpg" height="400"/><br/>
       <sub><i>Merchandise Production</i></sub><br/>
     </td>
   </tr>
