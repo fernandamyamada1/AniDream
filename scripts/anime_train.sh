@@ -49,3 +49,57 @@ python3 main.py \
     --data.train_w 512 \
     --data.train_h 512 \
     --use_sigma_guidance True
+
+############################################## Stage II - 3DGS Training ###############################################
+# # 2.1 Animatable 3DGS Training - Canonical Pose
+# last_ckpt="${exp_name}/checkpoints/"
+# exp_name="${exp_name}-3dgs,cnl,5k"
+# python main.py \
+#     --guide.text "${text}" \
+#     --log.exp_name "${exp_name}" \
+#     --render.from_nerf "${last_ckpt}" \
+#     --predefined_body_parts ${predefined_body_parts} \
+#     --stage gs \
+#     --optim.iters 5000 \
+#     --prompt.scene canonical \
+#     --render.learn_hand_betas True \
+#     --render.lbs_weight_smooth True \
+#     --render.bg_color [0.5,0.5,0.5]
+
+# # 2.2 Animatable 3DGS Training - Random Canonical Pose
+# last_ckpt="${exp_name}/checkpoints/"
+# exp_name="${exp_name}-3dgs,rcnl,5k"
+# python main.py \
+#     --guide.text "${text}" \
+#     --log.exp_name "${exp_name}" \
+#     --optim.ckpt "${last_ckpt}" \
+#     --predefined_body_parts ${predefined_body_parts} \
+#     --stage gs \
+#     --optim.iters 5000 \
+#     --prompt.scene canonical-R \
+#     --render.bg_color [0.5,0.5,0.5]
+
+# # 2.3 Animatable 3DGS Training - Random Pose
+# last_ckpt="${exp_name}/checkpoints/"
+# exp_name="${exp_name}-3dgs,rand,5k"
+# python main.py \
+#     --guide.text "${text}" \
+#     --log.exp_name "${exp_name}" \
+#     --optim.ckpt "${last_ckpt}" \
+#     --predefined_body_parts ${predefined_body_parts} \
+#     --stage gs \
+#     --optim.iters 5000 \
+#     --prompt.scene ${random_pose_sampler} \
+#     --render.bg_color [0.5,0.5,0.5]
+
+
+# ################################################### Animation Test ####################################################
+# # 3. Animation Test - AIST++
+# python main.py \
+#     --log.exp_name "${exp_name}" \
+#     --predefined_body_parts ${predefined_body_parts} \
+#     --stage gs \
+#     --log.eval_only True \
+#     --prompt.scene demo,aist \
+#     --data.eval_video_fps 60 \
+#     --data.eval_camera_track fixed
