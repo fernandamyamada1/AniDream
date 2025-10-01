@@ -285,7 +285,7 @@ This animation shows an avatar performing kung-fu movements. The movements come 
 </p>
 
 <p align="center" style="font-size: small; margin-top: 10px;">
-  The original video sample for this animation comes from: <a href="https://github.com/IDEA-Research/Motion-X" target="_blank">github.com/IDEA-Research/Motion-X</a>
+  The original video sample for this animation comes from Motion-X-ReEnact.
 </p>
 
 ### 3D Printing
