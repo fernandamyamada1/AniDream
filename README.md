@@ -189,15 +189,15 @@ In the script for training, we provide code for 3D animation using motions from 
 <table align="center">
   <tr>
     <td align="center" style="padding: 10px;">
-      <img src="assets/train_rig.gif" width="300"/><br/>
+      <img src="assets/train_rig.gif" width="240"/><br/>
       <sub><i>Canonical Pose Rigging</i></sub>
     </td>
     <td align="center" style="padding: 10px;">
-      <img src="assets/train_random.gif" width="300"/><br/>
+      <img src="assets/train_random.gif" width="240"/><br/>
       <sub><i>Random Pose Rigging</i></sub>
     </td>
     <td align="center" style="padding: 10px;">
-      <img src="assets/train_aist.gif" width="300"/><br/>
+      <img src="assets/train_aist.gif" width="240"/><br/>
       <sub><i>Animation with AIST++</i></sub>
     </td>
   </tr>
