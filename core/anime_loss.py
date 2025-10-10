@@ -436,4 +436,4 @@ class LineArtLoss(nn.Module):
         # We want these edge regions to be dark (close to 0)
         # So we penalize high values in edge regions
         edge_values = x_gray * edge_regions.float()
-        return 1 - edge_values.mean()
+        return edge_values.mean()
