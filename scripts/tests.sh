@@ -1,4 +1,4 @@
-prefix = "flat"
+prefix="flat"
 
 # Compare to DreamWaltz-G
 
