@@ -19,6 +19,10 @@ We are excited to share the official repository for **"AniDream: Generating Skel
 🎓 Conference: IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2025)
 
 
+The **author’s preprint version** of our paper is freely available on **[ResearchGate](https://www.researchgate.net/publication/397516935_AniDream_Generating_Skeleton-Guided_Anime_Avatars_from_Text_Prompts)**!
+
+---
+
 
 ## Abstract
 
@@ -378,9 +382,13 @@ AniDream provides tools and outputs that align with the following industry segme
 ## Citation
 ```
 @inproceedings{yamada2025anidream,
-  title     = {AniDream: Generating Skeleton-Guided Anime Avatars from Text Prompts},
-  author    = {Fernanda Miyuki Yamada and Hiroki Takahashi},
-  booktitle = {IEEE International Symposium on Mixed and Augmented Reality (ISMAR)},
-  year      = {2025}
+  author={Yamada, Fernanda Miyuki and Takahashi, Hiroki},
+  booktitle={2025 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)}, 
+  title={AniDream: Generating Skeleton-Guided Anime Avatars from Text Prompts}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1042-1052},
+  doi={10.1109/ISMAR67309.2025.00111}
 }
 ```
