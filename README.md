@@ -292,13 +292,54 @@ This animation shows an avatar performing kung-fu movements. The movements come 
 
 These keypoints are then used to render the avatar, demonstrating how the model animates characters based on real human motion.
 
+The original video samples for this animation come from Motion-X-ReEnact.
+
 <p align="center">
- <img src="assets/animation_video.gif" width="700"/>
+ <img src="assets/animation_video1.gif" width="700"/>
+</p>
+<p align="center" style="font-size: small; margin-top: 10px;">
+  Yang Style Tai Chi 
 </p>
 
-<p align="center" style="font-size: small; margin-top: 10px;">
-  The original video sample for this animation comes from Motion-X-ReEnact.
+<p align="center">
+ <img src="assets/animation_video2.gif" width="700"/>
 </p>
+<p align="center" style="font-size: small; margin-top: 10px;">
+  Peking Opera Performance
+</p>
+
+<p align="center">
+ <img src="assets/animation_video3.gif" width="700"/>
+</p>
+<p align="center" style="font-size: small; margin-top: 10px;">
+  Aerial Kick
+</p>
+
+
+<p align="center">
+ <img src="assets/animation_video4.gif" width="700"/>
+</p>
+<p align="center" style="font-size: small; margin-top: 10px;">
+  Play the Guqin
+</p>
+
+<p align="center">
+ <img src="assets/animation_video5.gif" width="700"/>
+</p>
+<p align="center" style="font-size: small; margin-top: 10px;">
+  Baseball Pitch
+</p>
+
+<p align="center">
+ <img src="assets/animation_video6.gif" width="700"/>
+</p>
+<p align="center" style="font-size: small; margin-top: 10px;">
+  Leg Lifts
+</p>
+
+
+
+
 
 ### 3D Printing
 
