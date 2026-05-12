@@ -17,8 +17,8 @@ bash scripts/anime_train.sh "$prefix an anime boy wearing a blue denim jacket, b
 
 #Compare to literature 
 
-bash scripts/anime_ismar.sh "$prefix an anime boy with short white hair wearing a white hoodie and black pants" #NOVA-3D
-bash scripts/anime_ismar.sh "$prefix an anime boy with short gray hair wearing a gray t-shirt and jeans" #StdGEN
-bash scripts/anime_ismar.sh "$prefix an anime girl with purple hair wearing a long-sleeve black dress and black knee-high socks" #CharacterGen
-bash scripts/anime_ismar.sh "$prefix an anime girl with pink hair wearing a school uniform with baby blue shirt, navy blue skirt and gray knee-high socks" #CoNR
+bash scripts/anime_train.sh "$prefix an anime boy with short white hair wearing a white hoodie and black pants" #NOVA-3D
+bash scripts/anime_train.sh "$prefix an anime boy with short gray hair wearing a gray t-shirt and jeans" #StdGEN
+bash scripts/anime_train.sh "$prefix an anime girl with purple hair wearing a long-sleeve black dress and black knee-high socks" #CharacterGen
+bash scripts/anime_train.sh "$prefix an anime girl with pink hair wearing a school uniform with baby blue shirt, navy blue skirt and gray knee-high socks" #CoNR
 
